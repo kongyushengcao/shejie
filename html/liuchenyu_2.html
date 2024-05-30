@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/daohang.css">
+    <link href="../images/mmexport1686720811267.jpg" rel="icon" type="image/x-ico">
+    <script src="../js/gVerify.js"></script>
+    <title>蛇宝的注册界面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: url(../images/R-C\ \(1\).jpg) no-repeat;
+            /* background: url(../images/shejie4.jpg) no-repeat;*/
+            background-position: center 60%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box .left {
+            float: left;
+            width: 500px;
+            height: 560px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(3px);
+            background: rgba(55, 50, 50, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .box .left>h2 {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .box .left .input-box {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .box .left .input-box label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 5px;
+        }
+
+        .box .left .input-box input {
+            letter-spacing: 1px;
+            font-size: 14px;
+            box-sizing: border-box;
+            width: 250px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            padding: 0 12px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: 0.2s;
+        }
+
+        .box .left .input-box input:focus {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .box .left .xuanzewenjian {
+            width: 250px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .box .left .xuanzewenjian>p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 5px;
+        }
+
+        .box .left .output-box {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .box .left .output-box>p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 5px;
+        }
+
+        .box .left .output-box input {
+            letter-spacing: 1px;
+            font-size: 14px;
+            box-sizing: border-box;
+            width: 250px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            padding: 0 12px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: 0.2s;
+        }
+
+        .box .left .output-box input:focus {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .box .right {
+            text-align: center;
+            float: right;
+            width: 500px;
+            height: 563px;
+            background-color: rgba(127, 127, 127, 0.5);
+            /* background-image: url(../images/Screenshot_2023-08-30-17-59-20-24_2332cb9b27b851b548ba47a91682926c.jpg); */
+            background-position: 60% 50%;
+        }
+
+        .box .right>h1 {
+            margin-top: 85px;
+        }
+
+        button {
+            width: 200px;
+            height: 30px;
+            border-radius: 5%;
+            background-color: #fcb928;
+            border: none;
+            color: rgb(10, 10, 10);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="daohang">
+        <div class="nav">
+            <ul>
+                <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                        target="_blank">个人简介</a></li>
+                <li><a href="#">个人理财</a>
+                    <ul>
+                        <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                        <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                        <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                        <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">课程表</a>
+                    <ul>
+                        <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                    </ul>
+                </li>
+                <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                <li><a href="#">在线注册</a>
+                    <ul>
+                        <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                        <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">蛇姐的网络活动</a>
+                    <ul>
+                        <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                target="_blank">小红书</a></li>
+                        <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                target="_blank">抖音</a></li>
+                        <li><a href="haiwei.html">待写</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fankui.html" target="_blank">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+
+    <div class="box">
+        <div class="left">
+            <h2>注册界面</h2>
+            <div class="input-box">
+                <label>注册邮箱</label>
+                <input type="text" placeholder="请输入邮箱" id="email" />
+                <label>公司用户名</label>
+                <input id="name" type="text" onchange="namechange()" placeholder="公司用户名长度不能少于5位" />
+            </div>
+            <div class="xuanzewenjian">
+                <p>选择头像</p>
+                <input type="file" />
+            </div>
+            <div class="output-box">
+                <p>请输入密码</p>
+                <input id="passworld" type="password" placeholder="密码长度至少为6位，且为数字和字母的组合" />
+                <p>确认密码</p>
+                <input id="ispassworld" type="password" placeholder="两次密码必须一致" />
+                <p>验证码</p>
+                <input type="text" id="code_input" value="" placeholder="请输入验证码" />
+                <div id="v_container" style="width: 234px;height: 40px; margin-top: 10px;"></div>
+            </div>
+            <button onclick="subm()">申请注册</button>
+        </div>
+        <div class="right">
+            <h1>需要个人账号？
+                <h5>点击下方的个人注册即可完成！
+                    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+                    <button id="gerenzhuce" onclick="click()">个人注册</button>
+        </div>
+    </div>
+    <!-- <div class="kuochong"></div> -->
+</body>
+<script language="javascript" type="text/javascript">
+    //当点击时，会跳转到zhuce.html页面
+    document.getElementById("gerenzhuce").onclick = function click() {
+        window.location.href = "zhuce.html";
+    }
+    //当邮箱的内容发生变化时，会触发该函数、、test用于测试给定的字符串是否匹配该正则表达式。
+    email.onchange = function () {
+        var email = this.value;
+        var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        if (reg.test(email)) {
+            //邮箱格式正确
+        } else {
+            alert("邮箱格式不正确");
+        }
+    }
+    function namechange() {
+        var x = document.getElementById("name").value.length;
+        if (x >= 5) {
+            //姓名格式正确
+        } else {
+            alert("姓名格式不正确");
+        }
+    }
+    //判断第一次输入的密码格式
+    passworld.onchange = function () {
+        var passworld = this.value;
+        var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+        if (reg.test(passworld)) {
+            //密码格式正确
+        } else {
+            alert("密码格式不正确");
+        }
+    }
+    //比较两次的密码内容是否一致
+    ispassworld.onchange = function () {
+        var p1 = this.value;
+        var p2 = document.getElementById("passworld").value;
+        if (p2 == p1) {
+        }
+        else {
+            alert("两次密码不相同");
+        }
+    }
+
+
+    function subm() {
+        var na = document.getElementById("name").value;
+        var pword = document.getElementById("passworld").value;
+        var ipword = document.getElementById("ispassworld").value;
+        var email = document.getElementById("email").value;
+        var reg1 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+        var reg2 = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        var x = document.getElementById("name").value.length;
+        // 将用户名、密码和邮箱保存到本地存储
+        localStorage.setItem("username", na);
+        localStorage.setItem("password", pword);
+        localStorage.setItem("email", email);
+        // 进行验证码验证
+        var code = document.getElementById("code_input").value;
+        if (verifyCode.validate(code) && pword == ipword && reg2.test(email) && reg1.test(pword) && x >= 5) {
+            // 验证码验证通过且密码相等，跳转到目标页面
+            window.location.href = "liuchenyu_1.html";
+        } else {
+            // 验证码验证失败或密码不相等，给出相应提示
+            if (!verifyCode.validate(code)) {
+                alert("验证码错误");
+            } else if (pword !== ipword) {
+                alert("密码不相同或者未输入");
+            } else if (!reg1.test(pword)) {
+                alert("密码格式不正确");
+            } else if (!reg2.test(email)) {
+                alert("邮箱格式不正确");
+            } else if (x < 5) {
+                alert("姓名格式不正确");
+            }
+        }
+    }
+    var verifyCode = new GVerify("v_container");
+
+
+</script>
+
+</html>

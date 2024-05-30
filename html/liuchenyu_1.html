@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../images/Screenshot_2023-08-30-17-59-14-31_2332cb9b27b851b548ba47a91682926c.jpg" rel="icon" type="image/x-ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/daohang.css">
+    <title>蛇果的登录界面</title>
+    <script src="../js/gVerify.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            /* background: url(../images/Screenshot_2023-08-30-17-59-14-31_2332cb9b27b851b548ba47a91682926c.jpg) no-repeat; */
+            background: url(../images/R-C\ \(1\).jpg) no-repeat;
+            background-position: 50% 61%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .boxup {
+            width: 500px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 500px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            background: rgba(55, 50, 50, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .box>h2 {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+        }
+
+        .box .input-box {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .box .input-box label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 5px;
+        }
+
+        .box .input-box input {
+            letter-spacing: 1px;
+            font-size: 14px;
+            box-sizing: border-box;
+            width: 250px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+            padding: 0 12px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: 0.2s;
+        }
+
+        .box .input-box input:focus {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+
+        /* 忘记密码的开始设置 */
+        .box .input-box>a {
+            outline: none;
+            display: block;
+            width: 250px;
+            text-align: end;
+            text-decoration: none;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .box .input-box>a:hover {
+            color: rgba(255, 255, 0, 1);
+        }
+
+        /* 忘记密码的结束设置css */
+
+        /* 按钮的设置开始css */
+        .box .input-box>div {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box .input-box>div>button {
+            outline: none;
+            margin-top: 10px;
+            display: block;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+
+        .box .input-box>div>button:nth-of-type(1) {
+            width: 120px;
+            height: 35px;
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(192, 119, 91, 0.7);
+            background: rgba(192, 119, 91, 0.5);
+        }
+
+        .box .input-box>div>button:nth-of-type(2) {
+            width: 120px;
+            height: 35px;
+            margin-left: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(192, 119, 91, 0.7);
+            background: rgba(192, 119, 91, 0.5);
+        }
+
+        .box .input-box>div>button:hover {
+            border: 1px solid rgba(251, 128, 71, 0.7);
+            background: rgba(251, 128, 71, 0.5);
+        }
+        /* 按钮结束的设置css 结束 */
+        
+    </style>
+</head>
+
+<body>
+    <div class="daohang">
+        <div class="nav">
+            <ul>
+                <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                        target="_blank">个人简介</a></li>
+                <li><a href="#">个人理财</a>
+                    <ul>
+                        <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                        <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                        <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                        <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">课程表</a>
+                    <ul>
+                        <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                    </ul>
+                </li>
+                <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                <li><a href="#">在线注册</a>
+                    <ul>
+                        <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                        <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">蛇姐的网络活动</a>
+                    <ul>
+                        <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                target="_blank">小红书</a></li>
+                        <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                target="_blank">抖音</a></li>
+                        <li><a href="haiwei.html">待写</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fankui.html" target="_blank">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- 上面的导航栏 -->
+    <div class="boxup">
+        <div class="box">
+            <h2>立即登录</h2>
+            <div class="input-box">
+                <label>邮箱</label>
+                <input type="text" placeholder="请输入邮箱" id="email" />
+            </div>
+            <div class="input-box">
+                <label>密码</label>
+                <input type="passworld" placeholder="请输入密码" id="passworld" />
+            </div>
+            <div class="input-box">
+                <a href="#" id="wangjimima">忘记密码?</a>
+                <label>验证码</label>
+                <input type="text" id="code_input" value="" placeholder="请输入验证码" />
+                <div id="v_container" style="width: 234px;height: 40px; margin-top: 10px;"></div>
+                <div>
+                    <button onclick="denlu()" id="loginBtn">登录</button>
+                    <button onclick="click()" id="zhuce">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kuochong"></div>
+</body>
+<script language="javascript" type="text/javascript">
+    // window.onload = function () {
+    //     var loginBtn = document.getElementById("loginBtn");
+    //     var passwordInput = document.getElementById("passworld");
+    //     var emailInput = document.getElementById("email");
+
+    //     // 禁用登录按钮
+    //     loginBtn.disabled = true;
+
+    //     // 监听输入框内容变化事件
+    //     //当用户在此输入框中输入内容时，会触发后者的函数
+    //     passwordInput.addEventListener("input", validateInputs);
+    //     emailInput.addEventListener("input", validateInputs);
+
+    //     // 校验输入框内容并启用/禁用登录按钮
+    //     function validateInputs() {
+    //         var password = passwordInput.value;
+    //         var email = emailInput.value;
+
+    //         // 在这里添加你的密码和邮箱的校验逻辑
+    //         var passwordRegex = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+    //         // 定义了密码的校验规则，要求密码长度为6到12位，并且必须包含字母和数字
+    //         var emailRegex = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+    //         // 定义了邮箱的校验规则，要求邮箱格式符合常见标准。
+
+    //         if (passwordRegex.test(password) && emailRegex.test(email)) {
+    //             // 校验通过，启用登录按钮
+    //             loginBtn.disabled = false;
+    //         } else {
+    //             // 校验不通过，禁用登录按钮
+    //             loginBtn.disabled = true;
+    //         }
+    //     }
+    // };
+
+    //注册
+    document.getElementById("zhuce").onclick = function click() {
+        window.location.href = "liuchenyu_2.html";
+    }
+    //忘记密码
+    document.getElementById("wangjimima").onclick = function click() {
+        window.location.href = "liuchenyu_2.html";
+    }
+    email.onchange = function () {
+        var email = this.value;
+        var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        if (reg.test(email)) {
+            //alert("邮箱格式正确");
+        } else {
+            alert("邮箱格式不正确");
+        }
+    }
+    passworld.onchange = function () {
+        var passworld = this.value;
+        var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+        if (reg.test(passworld)) {
+        } else {
+            alert("密码格式不正确");
+        }
+    }
+    function denlu() {
+        var p = document.getElementById("passworld").value;
+        var e = document.getElementById("email").value;
+        var p2 = localStorage.getItem("password");
+        var e2 = localStorage.getItem("email");
+        var reg2 = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        var reg1 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/;
+        // 进行验证码验证
+        var code = document.getElementById("code_input").value;
+        if (verifyCode.validate(code) && p == p2 && e == e2 && p !== '' && e !== '' && reg2.test(e) && reg1.test(p)) {
+            // 验证码验证通过且密码相等，跳转到目标页面
+            window.location.href = "Test.html";
+        } else {
+            // 验证码验证失败或密码不相等或账号不正确，给出相应提示
+            if (!verifyCode.validate(code)) {
+                alert("验证码错误");
+            } else if (p == '') {
+                alert("密码不能为空");
+            } else if (e == "") {
+                alert("邮箱不能为空");
+            } else if (!reg1.test(p)) {
+                alert("密码格式不正确");
+            } else if (!reg2.test(e)) {
+                alert("邮箱格式不正确");
+            } else if (p !== p2) {
+                alert("密码错误");
+            } else if (e !== e2) {
+                alert("邮箱错误");
+            }
+        }
+    }
+    var verifyCode = new GVerify("v_container");
+</script>
+<!-- console.log(localStorage.getItem("username"));
+console.log(localStorage.getItem("password"));
+console.log(localStorage.getItem("email")); -->
+
+</html>

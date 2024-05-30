@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>导航栏</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+	<link href="../images/shejie5.jpg" rel="icon" type="image/x-ico">
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: "微软雅黑";
+	}
+
+	.daohang {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		height: 685px;
+		margin: 0 auto;
+		background: url("../images/微信图片_20230917224224.jpg") center;
+		background-position: 10% 35%;
+		background-size: cover;
+	}
+
+	ul,
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.nav {
+		width: 1200px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.nav ul li {
+		float: left;
+		/* 左浮动 */
+		padding: 3px;
+		margin-top: 1px;
+		position: relative;
+		/* 设置为相对定位 */
+	}
+
+	.nav ul li a {
+		width: 130px;
+		height: 52px;
+		text-align: center;
+		/* ：将链接元素的文本内容居中对齐。 */
+		line-height: 40px;
+		display: block;
+		/* 显示方式设置为块级元素 */
+		color: #544BB7;
+		font-size: 18px;
+		margin: 0 1.5px;
+		/* 左右1.5 */
+		padding: 5px;
+	}
+
+	.nav ul li ul {
+		width: 100px;
+		position: absolute;
+		/* 将子菜单的定位方式设置为绝对定位，使其相对于父级元素进行定位。 */
+		display: none;
+		left: 50%;
+		/* 将子菜单左侧边缘与父级元素左侧边缘对齐。 */
+		transform: translateX(-50%);
+		/* 通过translateX变换将子菜单水平居中对齐。 */
+	}
+
+	.nav ul li ul li {
+		float: none;
+		/* 取消子菜单项的浮动效果 */
+		height: 23px;
+		display: flex;
+		/* 将子菜单项的布局设置为弹性布局。 */
+		justify-content: center;
+		/* 水平居中对齐子菜单项的内容。 */
+		align-items: center;
+		/* 垂直居中对齐子菜单项的内容。 */
+	}
+
+	.nav ul li ul li a {
+		border-right: none;
+		/* 移除子菜单项右侧的边框 */
+		font-size: 16px;
+		height: 38px;
+	}
+
+	.nav ul li:hover {
+		background: rgba(255, 250, 250, 0.1);
+	}
+
+	.nav ul li:hover ul {
+		background: rgba(255, 250, 250, 0.1);
+		display: block;
+		/* 指定了元素的显示方式为块级元素 */
+	}
+
+	/* 第三个div */
+	.footer {
+		background-color: rgba(161, 226, 87, 0.2);
+		text-align: center;
+		padding: 10px;
+		font-size: 14px;
+		bottom: 0;
+		left: 0;
+		width: 1453px;
+		/* 目前调试出来的屏幕的最大宽度 */
+		display: flex;
+	}
+
+	.box {
+		width: 33.33%;
+		/* 保证三个盒子等宽 */
+		float: left;
+	}
+
+	.footer p {
+		margin: 0;
+	}
+
+	.footer a {
+		color: #555;
+		text-decoration: none;
+		margin-left: 10px;
+	}
+
+	.footer a:hover {
+		text-decoration: underline;
+	}
+
+	.footer-list {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-item {
+		margin: 0 10px;
+	}
+
+	.footer-item a {
+		display: block;
+	}
+
+	.footer-item img {
+		width: 30px;
+		height: 30px;
+	}
+</style>
+
+<body>
+	<div class="daohang">
+		<div class="nav">
+			<ul>
+				<li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+						target="_blank">个人简介</a></li>
+				<li><a href="#">个人理财</a>
+					<ul class="nav-link">
+						<li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+						<li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+						<li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+						<li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+					</ul>
+				</li>
+				<li><a href="#">课程表</a>
+					<ul class="nav-link">
+						<li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+					</ul>
+				</li>
+				<li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+				<li><a href="#">在线注册</a>
+					<ul class="nav-link">
+						<li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+						<li><a href="zhuce.html" target="_blank">个人加入</a></li>
+					</ul>
+				</li>
+				<li><a href="#">蛇姐的网络活动</a>
+					<ul class="nav-link">
+						<li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+						<li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+								target="_blank">小红书</a></li>
+						<li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+								target="_blank">抖音</a></li>
+						<li><a href="haiwei.html">待写</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="fankui.html" target="_blank">联系我们</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="box">
+			<!-- 区域一 -->
+			<ul class="footer-list">
+				<li class="footer-item">
+					<a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"><img
+							src="../images/抖音.png" alt="抖音"></a>
+				</li>
+				<li class="footer-item">
+					<a href="https://weibo.com/u/6979985283"><img src="../images/微博.png" alt="微博"></a>
+				</li>
+				<li class="footer-item">
+					<a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"><img
+							src="../images/小红书.png" alt="小红书"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="box">
+			<!-- 区域二 -->
+			<p>liuchenyu</p>
+			<p>刘宸瑜</p>
+		</div>
+		<div class="box">
+			<!-- 区域三 -->
+			<p>邮编：050031 电话:0311-87208114(查号)</p>
+		</div>
+	</div>
+</body>
+
+</html>

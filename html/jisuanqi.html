@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理财计算器</title>
+    <link rel="stylesheet" href="../css/geren.css">
+    <link rel="stylesheet" href="../css/daohang.css">
+</head>
+
+<body>
+    <div class="daohang">
+        <div class="nav">
+            <ul>
+                <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                        target="_blank">个人简介</a></li>
+                <li><a href="#">个人理财</a>
+                    <ul>
+                        <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                        <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                        <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                        <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">课程表</a>
+                    <ul>
+                        <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                    </ul>
+                </li>
+                <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                <li><a href="#">在线注册</a>
+                    <ul>
+                        <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                        <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">蛇姐的网络活动</a>
+                    <ul>
+                        <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                target="_blank">小红书</a></li>
+                        <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                target="_blank">抖音</a></li>
+                        <li><a href="haiwei.html">待写</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fankui.html" target="_blank">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 上面的导航栏 -->
+    <!-- <h3>计算器</h3>
+    <label for="number1">输入第一个数：</label>
+    <input type="text" id="number1">
+    <label for="number2">输入第二个数：</label>
+    <input type="text" id="number2">
+    <button onclick="add()">加法计算</button>
+    <button onclick="subtract()">减法计算</button>
+    <button onclick="multiply()">乘法计算</button>
+    <button onclick="division()">除法计算</button>
+    <p id="result">
+        计算结果显示在这里
+    </p> -->
+
+    <div class="course-list">
+        <div class="course">
+            <h2>Coursera</h2>
+            <p>Coursera 是一个知名的在线学习平台。它提供了许多计算机科学和编程相关的课程，如Python基础课程和Java面向对象编程课程。</p>
+            <a href="https://www.coursera.org/">立即学习</a>
+        </div>
+
+        <div class="course">
+            <h2>Udemy</h2>
+            <p>Udemy 是一个全球最大的在线教育市场，提供了丰富的编程课程。您可以在该平台上找到针对Python和Java的大量课程，包括基础入门和深入学习。</p>
+            <a href="https://www.udemy.com/">立即学习</a>
+        </div>
+
+        <div class="course">
+            <h2>edX</h2>
+            <p>edX 由麻省理工学院和哈佛大学创办，是一个非营利性的在线学习平台。它提供了许多高质量的计算机科学和编程课程，包括Python和Java的相关课程。</p>
+            <a href="https://www.edx.org/">立即学习</a>
+        </div>
+
+        <div class="course">
+            <h2>计算机网络基础</h2>
+            <p>本课程将介绍计算机网络的基本知识和概念，包括 OSI 模型、TCP/IP 协议、网络安全等方面的内容。</p>
+            <a href="#">立即学习</a>
+        </div>
+
+        <div class="course">
+            <h2>深度学习与神经网络</h2>
+            <p>本课程将介绍深度学习和神经网络的原理和实践，包括反向传播算法、卷积神经网络、循环神经网络等内容。</p>
+            <a href="#">立即学习</a>
+        </div>
+
+        <div class="course">
+            <h2>Web 前端开发入门</h2>
+            <p>本课程将介绍 Web 前端开发的基本知识和技能，包括 HTML、CSS、JavaScript 等内容，帮助您打造精美的网站界面。</p>
+            <a href="#">立即学习</a>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    // 加法的函数
+    function add() {
+        const a = document.getElementById('number1').value;
+        const b = document.getElementById('number2').value;
+
+        // 验证输入是否为有效数字
+        if (isNaN(a) || isNaN(b)) {
+            alert('请输入有效的数字！');
+            return;
+        }
+
+        // 检查输入是否为空
+        if (a === '' || b === '') {
+            alert('请输入两个数字！');
+            return;
+        }
+
+        const c = Number(a) + Number(b);
+        document.getElementById('result').innerHTML = a + ' + ' + b + ' = ' + c;
+    }
+
+    function subtract() {
+        const a = document.getElementById('number1').value;
+        const b = document.getElementById('number2').value;
+
+        // 验证输入是否为有效数字
+        if (isNaN(a) || isNaN(b)) {
+            alert('请输入有效的数字！');
+            return;
+        }
+
+        // 检查输入是否为空
+        if (a === '' || b === '') {
+            alert('请输入两个数字！');
+            return;
+        }
+
+        const c = Number(a) - Number(b);
+        document.getElementById('result').innerHTML = a + ' - ' + b + ' = ' + c;
+    }
+
+    function multiply() {
+        const a = document.getElementById('number1').value;
+        const b = document.getElementById('number2').value;
+
+        // 验证输入是否为有效数字
+        if (isNaN(a) || isNaN(b)) {
+            alert('请输入有效的数字！');
+            return;
+        }
+
+        // 检查输入是否为空
+        if (a === '' || b === '') {
+            alert('请输入两个数字！');
+            return;
+        }
+
+        const c = Number(a) * Number(b);
+        document.getElementById('result').innerHTML = a + ' × ' + b + ' = ' + c;
+    }
+
+    function division() {
+        const a = document.getElementById('number1').value;
+        const b = document.getElementById('number2').value;
+
+        // 验证输入是否为有效数字
+        if (isNaN(a) || isNaN(b)) {
+            alert('请输入有效的数字！');
+            return;
+        }
+
+        // 检查输入是否为空
+        if (a === '' || b === '') {
+            alert('请输入两个数字！');
+            return;
+        }
+
+        // 检查除数是否为0
+        if (b === '0') {
+            alert('除数不能为0！');
+            return;
+        }
+
+        const c = Number(a) / Number(b);
+        document.getElementById('result').innerHTML = a + ' ÷ ' + b + ' = ' + c;
+    }
+</script> -->
+
+</html>

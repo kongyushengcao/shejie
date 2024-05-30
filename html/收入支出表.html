@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收入支出表</title>
+    <link rel="stylesheet" href="../css/daohang.css">
+    <script src="../js/shouruzhichu.js"></script>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <div class="daohang">
+        <div class="nav">
+            <ul>
+                <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                        target="_blank">个人简介</a></li>
+                <li><a href="#">个人理财</a>
+                    <ul>
+                        <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                        <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                        <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                        <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">课程表</a>
+                    <ul>
+                        <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                    </ul>
+                </li>
+                <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                <li><a href="#">在线注册</a>
+                    <ul>
+                        <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                        <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">蛇姐的网络活动</a>
+                    <ul>
+                        <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                target="_blank">小红书</a></li>
+                        <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                target="_blank">抖音</a></li>
+                        <li><a href="haiwei.html">待写</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fankui.html" target="_blank">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 上面的导航栏 -->
+
+    <table style="text-align:center" align="center" border="2" width="800" hight="80">
+
+        <tr>
+            <th colspan="6" align="center" bgcolor="#FFCC00" height="40">
+                <blockquote>
+                    <h1 class="STYLE2">收入支出表</h1>
+                    <h4 align="right" class="STYLE6">先生/女士家庭 日期</h4>
+                </blockquote>
+            </th>
+        </tr>
+
+        <tr bgcolor="#3399FF">
+            <th colspan="3" width="350" style="text-align:left">一、收入</th>
+            <th width="150">金额</th>
+            <th width="150">占总收入比</th>
+            <th width="150">备注</th>
+        </tr>
+
+        <tr>
+            <th width="130" rowspan="3">工资和薪金</th>
+            <th width="90">姓名</th>
+            <th width="130"><input type="text" id="xingming" value="" /></th>
+            <th><input type="text" id="shouru1" value="" /></th><!-- 金额的输入 -->
+            <th style="text-align:left" id="shou1" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+
+        </tr>
+
+        <tr>
+            <th>姓名</th>
+            <th><input type="text" id="xingming" value="" /></th>
+            <th><input type="text" id="shouru2" value="" /></th>
+            <th style="text-align:left" id="shou2" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th>姓名</th>
+            <th><input type="text" id="xingming" value="" /></th>
+            <th><input type="text" id="shouru3" value="" /></th>
+            <th style="text-align:left" id="shou3" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">自雇收入（工资外收入）</th>
+            <th><input type="text" id="shouru4" value="" /></th>
+            <th style="text-align:left" id="shou4" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">奖金和佣金</th>
+            <th><input type="text" id="shouru5" value="" /></th>
+            <th style="text-align:left" id="shou5" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">养老金和年金</th>
+            <th><input type="text" id="shouru6" value="" /></th>
+            <th style="text-align:left" id="shou6" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th rowspan="3">投资收入</th>
+            <th colspan="2" rowspan="3">利息和分红资本利得租金收入其他</th>
+            <th height="23"><input type="text" id="shouru7" value="" /></th>
+            <th style="text-align:left" id="shou7" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr height="23">
+            <th><input type="text" id="shouru8" value="" /></th>
+            <th style="text-align:left" id="shou8" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr height="23">
+            <th><input type="text" id="shouru9" value="" /></th>
+            <th style="text-align:left" id="shou9" onclick="shou()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr bgcolor="#3399FF">
+            <th colspan="3" width="300" style="text-align:left">总收入</th>
+            <th style="text-align:left" id="sum8" onclick="shouru()"></th>
+            <th style="text-align:left">100%</th>
+            <th></th>
+        </tr>
+
+        <tr bgcolor="#FF6699">
+            <th colspan="3" width="300" style="text-align:left">二、支出</th>
+            <th>金额</th>
+            <th>占总支出比</th>
+            <th>备注</th>
+        </tr>
+
+        <tr>
+            <th rowspan="2">住房</th>
+            <th height="23" colspan="2">租金、维护和装修</th>
+            <th><input type="text" id="zhichu1" value="" /></th>
+            <th style="text-align:left" id="zhi1" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">房贷</th>
+            <th><input type="text" id="zhichu2" value="" /></th>
+            <th style="text-align:left" id="zhi2" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th rowspan="3">家电、家具大件消费</th>
+            <th colspan="2">贷款支付</th>
+            <th><input type="text" id="zhichu3" value="" /></th>
+            <th style="text-align:left" id="zhi3" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">保险费</th>
+            <th><input type="text" id="zhichu4" value="" /></th>
+            <th style="text-align:left" id="zhi4" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">过路停车费</th>
+            <th><input type="text" id="zhichu5" value="" /></th>
+            <th style="text-align:left" id="zhi5" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th rowspan="6">日常生活开支</th>
+            <th colspan="2">水电暖</th>
+            <th><input type="text" id="zhichu6" value="" /></th>
+            <th style="text-align:left" id="zhi6" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">通讯</th>
+            <th><input type="text" id="zhichu7" value="" /></th>
+            <th style="text-align:left" id="zhi7" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">交通</th>
+            <th><input type="text" id="zhichu8" value="" /></th>
+            <th style="text-align:left" id="zhi8" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">日常生活用品</th>
+            <th><input type="text" id="zhichu9" value="" /></th>
+            <th style="text-align:left" id="zhi9" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">外出就餐</th>
+            <th><input type="text" id="zhichu10" value="" /></th>
+            <th style="text-align:left" id="zhi10" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">其他</th>
+            <th><input type="text" id="zhichu11" value="" /></th>
+            <th style="text-align:left" id="zhi11" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">购买衣物支出</th>
+            <th><input type="text" id="zhichu12" value="" /></th>
+            <th style="text-align:left" id="zhi12" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">个人护理支出</th>
+            <th><input type="text" id="zhichu13" value="" /></th>
+            <th style="text-align:left" id="zhi13" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">休闲娱乐</th>
+            <th><input type="text" id="zhichu14" value="" /></th>
+            <th style="text-align:left" id="zhi14" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">商业保险费用</th>
+            <th><input type="text" id="zhichu15" value="" /></th>
+            <th style="text-align:left" id="zhi15" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">医疗费用</th>
+            <th><input type="text" id="zhichu16" value="" /></th>
+            <th style="text-align:left" id="zhi16" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr>
+            <th colspan="3">其他项目</th>
+            <th><input type="text" id="zhichu17" value="" /></th>
+            <th style="text-align:left" id="zhi17" onclick="zhi()"></th>
+            <th><input type="text" id="beizhu" value="" /></th>
+        </tr>
+
+        <tr bgcolor="#FF6699">
+            <th colspan="3">总支出</th>
+            <th style="text-align:left" id="sum9" onclick="zhichu()"></th>
+            <th style="text-align:left">100%</th>
+            <th></th>
+        </tr>
+
+        <tr bgcolor="#33CC66">
+            <th colspan="3">现金结余（收入-支出）</th>
+            <th id="sum10" onclick="xian()" style="text-align:left"></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr bgcolor="#FFCC66">
+            <th colspan="3">比率指标</th>
+            <th colspan="2">比率值</th>
+            <th>参考范围</th>
+        </tr>
+
+        <tr>
+            <th colspan="3">结余比率</th>
+            <th colspan="2" style="text-align:left" id="bi1" onclick="bilv()"></th>
+            <th>0.3</th>
+        </tr>
+        <tr>
+            <th colspan="3">投资与净资产比率</th>
+            <th colspan="2" style="text-align:left" id="bi2" onclick="bilv()"></th>
+            <th>0.2</th>
+        </tr>
+        <tr>
+            <th colspan="3">清偿比率</th>
+            <th colspan="2" style="text-align:left" id="bi3" onclick="bilv()"></th>
+            <th>0.6—0.7</th>
+        </tr>
+
+        <tr>
+            <th colspan="3">负债比率</th>
+            <th colspan="2" style="text-align:left" id="bi4" onclick="bilv()"></th>
+            <th>0.0—0.4</th>
+        </tr>
+
+        <tr>
+            <th colspan="3">财务负担比率</th>
+            <th colspan="2" style="text-align:left" id="bi5" onclick="bilv()"></th>
+            <th>0.4</th>
+        </tr>
+
+        <tr>
+            <th colspan="3">流动性比率</th>
+            <th colspan="2" style="text-align:left" id="bi6" onclick="bilv()"></th>
+            <th>3</th>
+        </tr>
+
+    </table>
+</body>
+
+</html>

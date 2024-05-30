@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>抱歉，该功能还未启动</p>
+    <p>距离返回上一页还有 <span id="countdown"></span> 秒</p>
+</body>
+<script>
+    // prompt("5秒后返回上一页面","确认收到");
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            history.back();
+        }, 5000);//实际上执行的倒计时，！！！！！
+    });
+
+    //显示时间的功能
+    document.addEventListener('DOMContentLoaded', function () {
+        var count = 5; // 设定初始倒计时时间
+        var countdownElement = document.getElementById('countdown'); // 获取倒计时显示元素
+
+        // 定义更新倒计时函数
+        function updateCountdown() {
+            if (count > 0) {
+                countdownElement.innerHTML = count; // 更新倒计时显示
+                count--; // 倒计时减1
+                setTimeout(updateCountdown, 1000); // 每隔1秒钟更新一次
+            } else {
+                history.back(); // 倒计时结束后返回上一页
+            }
+        }
+
+        updateCountdown(); // 启动倒计时
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../images/shejie5.jpg" rel="icon" type="image/x-ico">
+    <title>图片的切换</title>
+    <style>
+        * {
+            margin: 0;
+            /* 可以消除元素的外边距，使其紧邻相邻元素。 */
+            padding: 0;
+            /* 可以消除元素的内边距，使内容与边框更紧凑。 */
+        }
+
+        body {
+            background: radial-gradient(circle at center, #FFB6C1, #8A2BE2);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            /* 将 body 元素设置为使用弹性盒模型布局。*/
+            flex-direction: column;
+            /* div竖直放置 */
+            justify-content: center;
+            /* 在弹性容器中水平居中内容。 */
+            align-items: center;
+            /* 在弹性容器中垂直居中内容。 */
+        }
+
+        .slideshow-container {
+            width: 400px;
+            /* 设置容器宽度 */
+            height: 400px;
+            /* 设置容器高度 */
+            border: 1px solid #000;
+            /* 设置边框样式 */
+            overflow: hidden;
+            /* ！！！！！！！！！！！！！！！超级重要 */
+            /* 隐藏超出容器大小的内容 */
+        }
+
+        .slide {
+            max-width: 100%;
+            /* 设置最大宽度 */
+            max-height: 200px;
+            /* 设置最大高度 */
+            display: none;
+            /* 通过 JavaScript 或其他方式来控制显示哪个图片。 */
+        }
+
+        .slide img {
+            width: 100%;
+            /* 图片宽度填充容器 */
+            height: 100%;
+            /* 图片高度填充容器 */
+            object-fit: cover;
+            /* 按比例缩放图片，保持宽高比例，填充整个容器 */
+        }
+
+        .slide.active {
+            display: block;
+            /* 被显示在页面上。 */
+            /* 用于显示当前图片的特殊的类！！！ */
+        }
+
+        /* 导航点 */
+        .dot-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            /* 属性将其定位在父容器底部的水平中心位置。 */
+            transform: translateX(-50%);
+            /* 将元素沿 X 轴向左移动自身宽度的一半，从而实现水平居中的效果。 */
+            display: flex;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 0 5px;
+        }
+
+        .dot.active {
+            background-color: red;
+        }
+
+        /* 导航栏 */
+        #div1 {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #text1 {
+            float: left;
+            color: #fff;
+            width: 150px;
+            padding: 12px 0;
+            height: 50px;
+        }
+
+        #text2,
+        #text3 {
+            float: right;
+            width: 100px;
+            color: #fff;
+            padding: 12px 0;
+            height: 50px;
+        }
+    </style>
+
+<body>
+    <div id="div1">
+        <div id="text1">欢迎登录！</div>
+        <div id="text2" onclick="outclick()">退出</div>
+        <a id="text3" href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+            style="text-decoration: none;">个人信息</a>
+    </div>
+    <button id="playButton">Play Music</button>
+    <audio id="bgMusic" src="../video/r4u1u-zt4ug.mp3" loop></audio>
+    <!-- <audio id="bgMusic" src="../video/r4u1u-zt4ug.mp3" autoplay="autoplay" loop="loop"></audio> -->
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="../images/oAeDjA3EACAILA2ym4DfhujaEC8tbA9XGgzFAg~tplv-dy-aweme-images_q75.webp" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="../images/mmexport1686720811267.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="../images/oEARK4eDngO4Eu5rAL8ANx9j7CbfkAAQDkgcA6~tplv-dy-aweme-images_q75.webp" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img src="../images/ooAJLxfBnQGtKuFdAGeAD69vXCbNkAAIDgg4A1~tplv-dy-aweme-images_q75.webp" alt="Image 4">
+        </div>
+        <div class="slide">
+            <img src="../images/oYRADAAeeEAQD9AgPMA7y7IMjgzznbCCNvtk3s~tplv-dy-aweme-images_q75.webp" alt="Image 5">
+        </div>
+        <div class="slide">
+            <img src="../images/ok9DHAjIAcAIeAuks4NeDrl6ECubgAMrCgniAh~tplv-dy-aweme-images_q75.webp" alt="Image 6">
+        </div>
+        <div class="slide">
+            <img src="../images/oQulEqeNAuNj6e7rAAnAIr6c9hkgiCDAA4DIbi~tplv-dy-aweme-images_q75.webp" alt="Image 7">
+        </div>
+        <div class="slide">
+            <img src="../images/oYtXF43DaCAfEJiEAIjACAA9Lgug2yE8zAeXhD~tplv-dy-aweme-images_q75.webp" alt="Image 8">
+        </div>
+        <div class="slide">
+            <img src="../images/ok9V6ANzyCiAGCSfhAAcFAEqAA7rtdkgQeIvD8~tplv-dy-aweme-images_q75.webp" alt="Image 9">
+        </div>
+        <div class="slide">
+            <img src="../images/ow8cvSgt7hAkqAQyACAAIiErtVAD9CANHzAedf~tplv-dy-aweme-images_q75.webp" alt="Image 10">
+        </div>
+        <div class="slide">
+            <img src="../images/shejie6.jpg" alt="Image 11">
+        </div>
+        <div class="slide">
+            <img src="../images/shejiebizhi5.jpg" alt="Image 12">
+        </div>
+        <div class="slide">
+            <img src="../images/oMuCFeC9DnkG1JAdLgA4AdtGIbXvBfAD9RQAxA~tplv-dy-aweme-images_q75.webp" alt="Image 13">
+        </div>
+        <div class="slide">
+            <img src="../images/owLANDOngXACJdGebAk9AAAFIBu4t1QNxvfGBD~tplv-dy-aweme-images_q75.webp" alt="Image 14">
+        </div>
+    </div>
+
+    <div class="dot-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</body>
+<script>
+    var slides = document.getElementsByClassName("slide");
+    //获取所有的图片
+    var dots = document.getElementsByClassName("dot");
+    var currentSlideIndex = 0;//记录索引值
+    var intervalId = null;//计时器
+
+    var name = localStorage.getItem("username");
+    var div1 = document.getElementById("text1");
+
+    //用于后续的函数，只展示当前的index所对应的内容
+    function showSlide(index) {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            //将当前遍历到的图片元素移除active
+        }
+        slides[index].classList.add("active");//添加active类
+
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
+        dots[index].classList.add("active");
+
+        currentSlideIndex = index;
+    }
+
+    //当点击时，清除定时器并重置intervalId为null
+    function pauseAutoPlay() {
+        clearInterval(intervalId); // 停止自动播放，清除定时器
+        intervalId = null; // 清空intervalId
+    }
+
+    //启动自动播放功能，设置定时器每隔一定时间切换到下一张图
+    function startAutoPlay() {
+        if (intervalId) {
+            clearInterval(intervalId); // 避免重复启动
+        }
+        //setInterval创建一个新的定时器并用intervalId记录
+        intervalId = setInterval(function () {
+            var nextIndex = (currentSlideIndex + 1) % slides.length;//计算下一索引（循环）
+            showSlide(nextIndex);//展示下一索引的内容
+        }, 1700);
+    }
+
+    //设置点击时的突发情况
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function () {
+            //dots类数组中查找当前被点击的导航点对象this的索引
+            var index = Array.prototype.indexOf.call(dots, this);
+            showSlide(index);//显示点击的索引的内容
+            pauseAutoPlay(); // 点击导航点后停止自动播放
+
+            setTimeout(function () {
+                startAutoPlay(); // 5 秒后重新启动自动播放
+            }, 5000);
+        });
+    }
+    //setInterval和setTimeout函数方法不同
+    startAutoPlay();
+
+    //背景音乐自动播放
+    //window.addEventListener('DOMContentLoaded', function() {
+    //    const bgMusic = document.getElementById('bgMusic');
+    //    bgMusic.play();
+    //});
+    window.addEventListener('DOMContentLoaded', function () {
+        const playButton = document.getElementById('playButton');
+        const bgMusic = document.getElementById('bgMusic');
+
+        playButton.addEventListener('click', function () {
+            bgMusic.play();
+        });
+    });
+
+
+    div1.innerHTML = "欢迎" + name + "登录！";
+    //点击退出时，会消除浏览器的记录并跳转到登陆界面
+    function outclick() {
+        localStorage.clear();
+        window.location.href = "liuchenyu_1.html";
+    }
+</script>
+
+
+</html>

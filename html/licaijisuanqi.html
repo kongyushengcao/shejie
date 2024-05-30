@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/daohang.css">
+    <title>存款计算器</title>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        } */
+
+        .container-1,
+        .container-2 {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            position: relative;
+            /* 添加相对定位 */
+        }
+
+        .container-1{
+            margin-top: 70px;
+            left: -300px;
+        }
+        .container-2 {
+            margin-top: -350px;
+            /* 设置负边距 */
+            left: 290px;
+            /* 调整 left 属性以实现并排效果 */
+        }
+
+        .container-wrapper {
+            width: 100%;
+            position: relative;
+            /* 添加相对定位 */
+            overflow: hidden;
+            /* 视口裁剪溢出部分 */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="daohang">
+        <div class="nav">
+            <ul>
+                <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                        target="_blank">个人简介</a></li>
+                <li><a href="#">个人理财</a>
+                    <ul>
+                        <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                        <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                        <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                        <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">课程表</a>
+                    <ul>
+                        <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                    </ul>
+                </li>
+                <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                <li><a href="#">在线注册</a>
+                    <ul>
+                        <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                        <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">蛇姐的网络活动</a>
+                    <ul>
+                        <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                        <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                target="_blank">小红书</a></li>
+                        <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                target="_blank">抖音</a></li>
+                        <li><a href="haiwei.html">待写</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fankui.html" target="_blank">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 上面的导航栏 -->
+    <div class="container--wrapper">
+        <div class="container-1">
+            <h1>存款计算器</h1>
+            <label>存款金额（元）:</label>
+            <input type="number" id="principal" placeholder="请输入存款金额">
+            <label>年利率（%）:</label>
+            <input type="number" id="rate" placeholder="请输入年利率">
+            <label>存款期限（月）:</label>
+            <select id="period">
+                <option value="1">一个月</option>
+                <option value="3">三个月</option>
+                <option value="6">六个月</option>
+                <option value="12">一年</option>
+                <option value="custom">自定义</option>
+            </select>
+            <div id="customPeriod" style="display: none;">
+                <label>自定义存款期限（月）:</label>
+                <input type="number" id="customPeriodInput" placeholder="请输入自定义的整数存款期限">
+            </div>
+            <button onclick="calculate()" id="jisuan">计算</button>
+            <div id="result"></div>
+        </div>
+
+        <div class="container-2">
+            <h1>年金计算器</h1>
+            <label for="rate">年化收益率（%）:</label>
+            <input type="number" id="rate1" step="0.01" placeholder="请输入年化收益率" />
+            <br />
+            <label for="years">年限（年）:</label>
+            <input type="number" id="years1" placeholder="请输入年限" />
+            <br />
+            <label for="target">理财目标（元）:</label>
+            <input type="number" id="target1" placeholder="请输入理财目标" />
+            <br />
+            <button onclick="calculate1()">计算</button>
+            <br />
+            <div id="result1"></div>
+        </div>
+    </div>
+    <script>
+        function calculate1() {
+            var rate = parseFloat(document.getElementById('rate1').value) / 100;
+            var years = parseInt(document.getElementById('years1').value);
+            var target = parseFloat(document.getElementById('target1').value);
+
+            var compoundInterest = target * (Math.pow(1 + rate, years) - 1) / rate / Math.pow(1 + rate, years);
+
+            var result = document.getElementById('result1');
+            result.innerHTML = '每年需要存入 ' + compoundInterest.toFixed(2) + ' 元。';
+        }
+    </script>
+
+    <script>
+        function calculate() {
+            var principal = parseFloat(document.getElementById('principal').value);
+            var rate = parseFloat(document.getElementById('rate').value);
+
+            // 获取存款期限
+            var periodSelect = document.getElementById('period');
+            var period = periodSelect.value;
+
+            // 如果选择了自定义期限，则获取自定义期限的值
+            if (period === 'custom') {
+                var customPeriodInput = document.getElementById('customPeriodInput');
+                var period = parseInt(customPeriodInput.value);//取整数
+            }
+
+            // 计算利息和本息总额
+            var interest = (principal * rate * period) / (12 * 100);
+            var totalAmount = principal + interest;
+
+            // 显示结果
+            var result = document.getElementById('result');
+            result.innerHTML = '存款利息：' + interest.toFixed(2) + ' 元<br>本息总额：' + totalAmount.toFixed(2) + ' 元';
+        }
+
+        // 根据选择的存款期限显示/隐藏自定义期限输入框
+        var periodSelect = document.getElementById('period');
+        var customPeriodDiv = document.getElementById('customPeriod');
+        periodSelect.addEventListener('change', function () {
+            if (periodSelect.value == 'custom') {
+                customPeriodDiv.style.display = 'block';
+            } else {
+                customPeriodDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

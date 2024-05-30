@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html
+       PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>家庭资产负债表</title>
+       <link rel="stylesheet" href="../css/daohang.css">
+       <script type="text/javascript" src="../js/zichanfuzhaibiao.js"></script>
+</head>
+<style>
+       body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+</style>
+
+<body>
+       <div class="daohang">
+              <div class="nav">
+                     <ul>
+                            <li><a href="https://baike.sogou.com/v624779.htm?fromTitle=%E5%BD%AD%E4%BA%8E%E6%99%8F#!"
+                                          target="_blank">个人简介</a></li>
+                            <li><a href="#">个人理财</a>
+                                   <ul>
+                                          <li><a href="家庭资产负债表.html" target="_blank">资产负债表</a></li>
+                                          <li><a href="收入支出表.html" target="_blank">支出收入表</a></li>
+                                          <li><a href="jisuanqi.html" target="_blank">个人学习</a></li>
+                                          <li><a href="licaijisuanqi.html" target="_blank">理财计算器</a></li>
+                                   </ul>
+                            </li>
+                            <li><a href="#">课程表</a>
+                                   <ul>
+                                          <li><a href="kebiao.html" target="_blank">大三上课表</a></li>
+                                   </ul>
+                            </li>
+                            <li><a href="liuchenyu_1.html" target="_blank">登录页面</a></li>
+                            <li><a href="#">在线注册</a>
+                                   <ul>
+                                          <li><a href="liuchenyu_2.html" target="_blank">企业加入</a></li>
+                                          <li><a href="zhuce.html" target="_blank">个人加入</a></li>
+                                   </ul>
+                            </li>
+                            <li><a href="#">蛇姐的网络活动</a>
+                                   <ul>
+                                          <li><a href="https://weibo.com/u/6979985283" target="_blank">微博</a></li>
+                                          <li><a href="https://www.xiaohongshu.com/user/profile/5c09f109000000000601f188"
+                                                        target="_blank">小红书</a></li>
+                                          <li><a href="https://www.douyin.com/user/MS4wLjABAAAAQR4WK9JBK9HPic72xsYWettM23c9_fRFjXS_4xmMKMk"
+                                                        target="_blank">抖音</a></li>
+                                          <li><a href="haiwei.html">待写</a></li>
+                                   </ul>
+                            </li>
+                            <li>
+                                   <a href="fankui.html" target="_blank">联系我们</a>
+                            </li>
+                     </ul>
+              </div>
+       </div>
+       <!-- 上面的导航栏 -->
+
+       <table border="5" width="800" hight="80" style="text-align:center" align="center">
+
+              <tr>
+                     <th colspan="5" align="center" bgcolor="#FFCC00" height="40">
+                            <blockquote>
+                                   <h1 class="STYLE2">资产负债表</h1>
+                                   <h4 align="right" class="STYLE6">先生/女士家庭 日期</h4>
+                            </blockquote>
+                     </th>
+              </tr>
+
+              <tr>
+                     <th rowspan="20" width="200">金融资产</th>
+                     <th rowspan="6" width="180" style="text-align:center">现金与现金等价物</th>
+                     <th width="220">现金</th>
+                     <th width="150">金额</th>
+                     <th width="150">备注</th>
+              </tr>
+
+              <tr>
+                     <th>活期存款</th>
+                     <th><input type="text" id="xianjin1" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>定期存款</th>
+                     <th><input type="text" id="xianjin2" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>其他类型银行存款</th>
+                     <th><input type="text" id="xianjin3" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>货币市场基金</th>
+                     <th><input type="text" id="xianjin4" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>人寿保险金收入</th>
+                     <th><input type="text" id="xianjin5" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr bgcolor="#33CCFF">
+                     <th colspan="2" style="text-align:center">现金与现金等价物小计</th>
+                     <th id="sum1" onclick="xianjin()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr>
+                     <th rowspan="12" width="180" style="text-align:center">其他金融资产</th>
+                     <th>债券</th>
+                     <th><input type="text" id="qita1" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>股票</th>
+                     <th><input type="text" id="qita2" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>权证</th>
+                     <th><input type="text" id="qita3" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>基金（不含货币基金）</th>
+                     <th><input type="text" id="qita4" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>期贷</th>
+                     <th><input type="text" id="qita5" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>外汇实盘</th>
+                     <th><input type="text" id="qita6" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>人民币理财产品</th>
+                     <th><input type="text" id="qita7" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>外币理财产品</th>
+                     <th><input type="text" id="qita8" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>保险理财产品</th>
+                     <th><input type="text" id="qita9" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>证券理财产品</th>
+                     <th><input type="text" id="qita10" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>信托理财产品</th>
+                     <th><input type="text" id="qita11" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th>其他</th>
+                     <th><input type="text" id="qita12" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr bgcolor="#0066FF">
+                     <th colspan="2" style="text-align:center">其他金融资产小计</th>
+                     <th id="sum2" onclick="qita()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr bgcolor="#0066FF">
+                     <th colspan="3" style="text-align:center">金融资产小计</th>
+                     <th id="sum3" onclick="jinrong()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr>
+                     <th rowspan="6" width="200" style="text-align:center">实物资产</th>
+                     <th colspan="2">自住房</th>
+                     <th><input type="text" id="shiwu1" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">投资房地产</th>
+                     <th><input type="text" id="shiwu2" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">机动车</th>
+                     <th><input type="text" id="shiwu3" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">家具及家用电器</th>
+                     <th><input type="text" id="shiwu4" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">珠宝和收藏品</th>
+                     <th><input type="text" id="shiwu5" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">其他个人资产</th>
+                     <th><input type="text" id="shiwu6" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr bgcolor="#FFFF00">
+                     <th colspan="3" style="text-align:center">实物资产小计</th>
+                     <th id="sum4" onclick="shiwu()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr bgcolor="#00FF00">
+                     <th colspan="3" style="text-align:center">资产总计</th>
+                     <th id="sum5" onclick="zichan()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr>
+                     <th rowspan="6" width="200" style="text-align:center">负债</th>
+                     <th colspan="2">信用卡透支</th>
+                     <th><input type="text" id="fuzhai1" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">消费贷款</th>
+                     <th><input type="text" id="fuzhai2" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">创业贷款</th>
+                     <th><input type="text" id="fuzhai3" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">汽车贷款</th>
+                     <th><input type="text" id="fuzhai4" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">住房贷款</th>
+                     <th><input type="text" id="fuzhai5" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr>
+                     <th colspan="2">其他负债</th>
+                     <th><input type="text" id="fuzhai6" value="" /></th>
+                     <th><input type="text" id="beizhu" value="" /></th>
+              </tr>
+
+              <tr bgcolor="#FF6600">
+                     <th colspan="3" style="text-align:center">负债总计</th>
+                     <th id="sum6" onclick="fuzhai()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+              <tr bgcolor="#FF66CC">
+                     <th colspan="3" style="text-align:center">净资产</th>
+                     <th id="sum7" onclick="jing()" style="text-align:left"></th>
+                     <th></th>
+              </tr>
+
+       </table>
+
+</body>
+
+</html>
