@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    /* 将标题居中显示 */
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    /* 设置表单的最大宽度为 500px，并水平居中显示 */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* 对标签元素设置间距 */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    /* 设置输入框和文本域的宽度为100% */
+    padding: 10px;
+    border: 2px solid #ccc;
+    /* 设置内边距、边框 */
+    border-radius: 4px;
+    /* 设置边框圆角 */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    /* 底部外边距 */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    /* 设置背景颜色 */
+    color: white;
+    /* 设置文本颜色 */
+    padding: 10px 20px;
+    /* 设置内边距 */
+    border: none;
+    /* 设置边框 */
+    border-radius: 4px;
+    /* 设置边框圆角 */
+    cursor: pointer;
+    /* 设置鼠标样式 */
+    float: right;
+    /* 设置浮动位置 */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
