@@ -1,0 +1,41 @@
+.course-list {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.course {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.course h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.course a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #544BB7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.course a:hover {
+    background-color: #322A73;
+}
